@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Beregn Priser - Cafe Klein</title>
+    <link rel="stylesheet" href="style.css" type="text/css"/>
+    <script>
+        function beregnPris() {
+            var antalKager = document.getElementById("antalKager").value;
+            var prisPerKage = 40; // eksempelpris for en kage
+            var totalPris = antalKager * prisPerKage;
+            alert("Den samlede pris for " + antalKager + " kager er: " + totalPris + " kr.");
+        }
+    </script>
+</head>
+
+<body>
+    <div id="hoved"> <!-- Rammen der dækker hele siden -->
+        <div id="top"> <!-- Rammen der er i toppen af siden -->
+            <p class="afsnit1">Beregn priser - Her kan du finde ud af, hvad dine kager koster</p>
+        </div>
+        <div id="menu"> <!-- Rammen der er sidens venstre side med menupunkter -->
+            <ul>
+                <li><a href="index.html">Forsiden</a></li><br>
+                <li><a href="menu.html">Menu</a></li><br>
+                <li><a href="kagegalleri.html">Kagegalleri</a></li><br>
+                <li><a href="kontakt.html">Kontakt</a></li><br>
+                <li><a href="beregnpriser.html">Beregn priser på kager</a></li><br>
+            </ul>
+        </div>
+        <div id="indhold"> <!-- Rammen der er til højre med sidens indhold -->
+            <h1>Beregn priser på kager</h1>
+            <p>Indtast antallet af kager, du ønsker at bestille, og få vist den samlede pris:</p>
+            <p class="afsnit2">Dette er et tekstafsnit.</p>
+            <input type="number" id="antalKager" placeholder="Antal kager" min="1">
+            <button onclick="beregnPris()">Beregn pris</button>
+        </div>
+    </div>
+</body>
+</html>
